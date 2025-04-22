@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription - Sahtek</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left-side">
+      <img src="illu.png" alt="Consultation illustration"> 
+    </div>
+    <div class="right-side">
+      <div class="logo-section">
+        <img src="logo.png" alt="Sahtek" class="logo">
+        <span class="brand">Sahtek</span>
+      </div>
+      <h2 class="form-title">Créer un compte</h2>
+      <p class="welcome-text">Rejoignez notre plateforme de santé</p>
+      <form class="form">
+        <input type="text" placeholder="Nom complet" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Mot de passe" required>
+        <button type="submit">S'inscrire</button>
+      </form>
+      <p class="register-link">Déjà inscrit ? <a href="login.html" class="link-switch">Se connecter</a></p>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.link-switch').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const url = this.getAttribute('href');
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+          window.location.href = url;
+        }, 400);
+      });
+    });
+  </script>
+</body>
+</html>
